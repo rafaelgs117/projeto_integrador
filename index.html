@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cidadão Consciente</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+<body>
+  <header>
+    <h1>Cidadão Consciente</h1>
+    <p>Relate problemas ambientais e urbanos da sua cidade</p>
+  </header>
+
+  <main>
+    <section id="mapa"></section>
+
+    <section>
+      <form id="formOcorrencia" enctype="multipart/form-data">
+        <h2>Nova ocorrência</h2>
+        <input type="text" id="titulo" name="titulo" placeholder="Título do problema" required>
+        <textarea id="descricao" name="descricao" rows="4" placeholder="Descreva o que aconteceu..." required></textarea>
+        <input type="file" id="imagem" name="imagem" accept="image/*">
+        <input type="text" id="localizacao" name="localizacao" placeholder="Localização (bairro/rua)">
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section id="ocorrencias">
+      <h2>Ocorrências recentes</h2>
+      <!-- Aqui os cards serão carregados -->
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
